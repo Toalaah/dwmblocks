@@ -1,2 +1,2 @@
 #!/bin/bash
-date "+%a, %b %-d %H:%M:%S"
+echo "🕐 $(date '+%a %b %-d %H:%M')"
