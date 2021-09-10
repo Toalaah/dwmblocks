@@ -1,2 +1,4 @@
-#!/bin/bash
-echo "📦 $(pacman -Qu | wc -l)"
+#!/bin/sh
+
+echo "ﮮ $(checkupdates | wc -l)"
+

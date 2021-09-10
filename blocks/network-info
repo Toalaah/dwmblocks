@@ -1,0 +1,5 @@
+#!/bin/sh
+
+network_status=$(curl -s ifconfig.me 2>/dev/null || echo "")
+[ network_status = '' ] && echo $network_status || echo " $network_status"
+

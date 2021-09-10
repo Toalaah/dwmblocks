@@ -1,2 +1,4 @@
-#!/bin/bash
-echo "🕐 $(date '+%a %b %-d %H:%M')"
+#!/bin/sh
+
+echo " $(date '+%a %b %-d %H:%M')"
+

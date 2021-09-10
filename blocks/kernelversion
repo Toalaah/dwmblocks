@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo " $(uname -r | sed 's/-.*$//')"
+
