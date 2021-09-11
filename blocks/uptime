@@ -1,4 +1,9 @@
 #!/bin/sh
 
-echo "襤 $(uptime | awk '{ print $3 }' | sed 's/,//')"
+up=$(uptime | sed -e 's/\,.*//g' -e 's/.*up\ //g' -e 's/^\ *//g')
+# check if uptime is longer than an hour, and if so pad the output
+case "$up" in
+*":"* ) echo "襤 $up";;
+*     ) echo "襤 0:$up";;
+esac
 
