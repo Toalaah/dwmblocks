@@ -1,0 +1,5 @@
+#!/bin/sh
+
+storage=$(df -h | grep /home$ | awk '{print $3 "/" $4 " (" $5 ")"}' | sed 's/G//1')
+echo "  $storage"
+

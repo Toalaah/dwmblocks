@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mem_usage=$(free -h --giga | grep Mem | sed 's/G//2' | awk '{print $3 "/" $2 }')
+echo "力 $mem_usage"
+

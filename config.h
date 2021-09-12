@@ -1,6 +1,8 @@
 static const Block blocks[] = {
 	{"",       "~/.config/dwmblocks/blocks/kernelversion",	 3600, 0},
-	{"",       "~/.config/dwmblocks/blocks/uptime",	         30,   0},
+	{"",       "~/.config/dwmblocks/blocks/memory",       	 5,    0},
+	{"",       "~/.config/dwmblocks/blocks/storage",       	 60,   0},
+	{"",       "~/.config/dwmblocks/blocks/uptime",	         60,   0},
 	{"",       "~/.config/dwmblocks/blocks/network-info",	   10,	 0},
 	{"",       "~/.config/dwmblocks/blocks/volume",	         1,	   0},
 	{"",       "~/.config/dwmblocks/blocks/updates",	       600,	 0},
