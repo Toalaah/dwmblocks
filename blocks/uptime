@@ -1,6 +1,11 @@
 #!/bin/sh
 
-up=$(uptime | sed -e 's/\,.*//g' -e 's/.*up\ //g' -e 's/^\ *//g')
+up=$(uptime | sed -e 's/\,.*//g' -e 's/.*up\ //g' -e 's/^\ *//g' -e 's/min//g' -e 's/hour//g' -e 's/\ *$//g')
+
+# check if uptime is less than 10 mins, and if so pad the output
+# (ie if the length of $up is 1)
+[ ${#up} -eq 1 ] && up=$(echo "0$up")
+
 # check if uptime is longer than an hour, and if so pad the output
 case "$up" in
 *":"* ) echo "襤 $up";;
