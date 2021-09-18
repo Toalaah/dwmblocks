@@ -1,10 +1,8 @@
 #!/bin/sh
 
-# get sound status
-out=$(amixer get Master | tail -n1)
-# check if player is off (muted)
-echo $out | grep -q "off" && echo "婢" && exit 0
 # get current volume level
-vol=$(echo $out | awk -F'[][]' '{ print $2 }')
+vol=$(pamixer --get-volume)
+# check if player is off (muted)
+pamixer --get-mute | grep -q "true" && echo "婢" && exit 0
 echo "墳 $vol"
 
