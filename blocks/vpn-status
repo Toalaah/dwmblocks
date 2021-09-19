@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# check if nord is installed
+command -V nordvpn >/dev/null || exit 0
+# get current status
+STATUS=$(nordvpn status)
+# if status is disconnect, directly exit
+echo "$STATUS" | head -1 | grep -qw "Disconnected" && echo "" && exit 0
+# else, vpn must be active, so get server info and print output
+SERVER=$(echo "$STATUS" | grep "Current server" | cut -d " " -f 3 | sed 's/\..*//g')
+echo " ($SERVER)" && exit 0
+
