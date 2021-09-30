@@ -5,7 +5,7 @@ static const Block blocks[] = {
   {"",       "~/.config/dwmblocks/blocks/uptime",          60,   0},
   {"",       "~/.config/dwmblocks/blocks/vpn-status",      5,    0},
   {"",       "~/.config/dwmblocks/blocks/network-info",    5,    0},
-  {"",       "~/.config/dwmblocks/blocks/volume",          1,    0},
+  {"",       "~/.config/dwmblocks/blocks/volume",          1,    1},
   {"",       "~/.config/dwmblocks/blocks/updates",         600,  0},
   {"",       "~/.config/dwmblocks/blocks/time",            1,    0},
 };
