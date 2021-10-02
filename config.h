@@ -1,3 +1,10 @@
+typedef struct Block {
+	const char* icon;
+	const char* command;
+	unsigned int interval;
+	unsigned int signal;
+} Block;
+
 static const Block blocks[] = {
   {"",       "~/.config/dwmblocks/blocks/kernelversion",   3600, 0},
   {"",       "~/.config/dwmblocks/blocks/memory",          5,    0},

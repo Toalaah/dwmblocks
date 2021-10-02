@@ -18,12 +18,6 @@
 #define MIN( a, b ) ( ( a < b) ? a : b )
 #define STATUSLENGTH (LENGTH(blocks) * CMDLENGTH + 1)
 
-typedef struct {
-	char* icon;
-	char* command;
-	unsigned int interval;
-	unsigned int signal;
-} Block;
 #ifndef __OpenBSD__
 void dummysighandler(int num);
 #endif
