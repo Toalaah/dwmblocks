@@ -3,6 +3,6 @@
 # get current volume level
 vol=$(pamixer --get-volume)
 # check if player is off (muted)
-pamixer --get-mute | grep -q "true" && echo "婢" && exit 0
+pamixer --get-mute &>/dev/null && echo "婢" && exit 0
 echo "墳 $vol"
 
